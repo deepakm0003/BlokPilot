@@ -6,22 +6,47 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sb:setup": "npx storyblok login || exit 0",
+    "sb:pull": "npx storyblok pull-components --space $env:NEXT_PUBLIC_STORYBLOK_SPACE_ID || true",
+    "sb:push": "npx storyblok push-components --space $env:NEXT_PUBLIC_STORYBLOK_SPACE_ID ./storyblok.components.json || true"
   },
   "dependencies": {
+    "@algolia/autocomplete-js": "^1.19.4",
+    "@algolia/recommend": "^5.39.0",
+    "@google/generative-ai": "^0.24.1",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "@storyblok/react": "^5.4.12",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "ai": "^5.0.57",
+    "algoliasearch": "^5.39.0",
+    "class-variance-authority": "^0.7.1",
+    "framer-motion": "^12.23.22",
+    "lucide-react": "^0.544.0",
+    "next": "15.5.4",
+    "next-themes": "^0.4.6",
+    "openai": "^5.23.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.4"
+    "storyblok-js-client": "^7.1.4",
+    "tailwind-variants": "^3.1.1",
+    "zod": "^4.1.11",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

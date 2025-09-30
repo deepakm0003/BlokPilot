@@ -1,0 +1,26 @@
+{
+  "components": [
+    {
+      "name": "feature_list",
+      "display_name": "Feature List",
+      "schema": {
+        "title": { "type": "text" },
+        "features": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_names": ["feature_item"]
+        }
+      }
+    },
+    {
+      "name": "feature_item",
+      "display_name": "Feature Item",
+      "schema": {
+        "name": { "type": "text" },
+        "description": { "type": "text" }
+      }
+    }
+  ]
+}
+
+

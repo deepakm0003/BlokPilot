@@ -22,5 +22,25 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Professional polish */
+.card {
+  @apply rounded-2xl border border-neutral-200 bg-white shadow-sm;
+}
+.section-title {
+  @apply text-3xl md:text-4xl font-semibold tracking-tight;
+}
+.muted {
+  @apply text-neutral-600;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition;
+}
+.btn-primary {
+  @apply bg-neutral-900 text-white hover:bg-neutral-800 shadow-sm;
+}
+.btn-outline {
+  @apply border border-neutral-200 text-neutral-800 hover:bg-neutral-50;
 }
