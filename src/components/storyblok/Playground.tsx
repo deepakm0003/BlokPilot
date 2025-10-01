@@ -21,6 +21,7 @@ export function StoryblokPlayground({
   const [stories, setStories] = useState<any[]>([]);
   const [loadingStories, setLoadingStories] = useState(false);
   const [selectedStoryId, setSelectedStoryId] = useState<string | null>(null);
+  const [devToken, setDevToken] = useState<string>("");
 
   const contentJson = {
     component: "page",
@@ -42,6 +43,7 @@ export function StoryblokPlayground({
           slug,
           name,
           content: contentJson,
+          devToken: devToken || undefined,
         }),
       });
       const data = await res.json();
@@ -65,7 +67,12 @@ export function StoryblokPlayground({
       const res = await fetch("/api/storyblok/list", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ spaceId, with_drafts: true, per_page: 50 }),
+        body: JSON.stringify({ 
+          spaceId, 
+          with_drafts: true, 
+          per_page: 50,
+          devToken: devToken || undefined,
+        }),
       });
       const data = await res.json();
       if (!res.ok || data.error) {
@@ -103,7 +110,11 @@ export function StoryblokPlayground({
       const res = await fetch("/api/storyblok/publish", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ spaceId, storyId: selectedStoryId }),
+        body: JSON.stringify({ 
+          spaceId, 
+          storyId: selectedStoryId,
+          devToken: devToken || undefined,
+        }),
       });
       const data = await res.json();
       if (!res.ok || data.error) {
@@ -123,7 +134,7 @@ export function StoryblokPlayground({
       <motion.h3 initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-2xl font-semibold mb-4">
         🧱 Storyblok Playground (Local Draft Builder)
       </motion.h3>
-      <p className="text-sm text-neutral-600 mb-6">Build a draft block and push it to your space as a Story. No tokens on the client are required; your server writes securely.</p>
+      <p className="text-sm text-neutral-600 mb-6">Build a draft block and push it to your space as a Story. Add your dev token below if server tokens are missing.</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-4">
@@ -137,6 +148,16 @@ export function StoryblokPlayground({
                 </button>
                 <button onClick={publishStory} disabled={!selectedStoryId || saving} className="px-3 py-1.5 bg-green-600 text-white rounded-md text-xs font-medium disabled:opacity-50">Publish Selected</button>
               </div>
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-1">Dev Management Token (optional)</label>
+              <input 
+                value={devToken} 
+                onChange={(e) => setDevToken(e.target.value)} 
+                placeholder="ckWxdls3BOdatw8LE6mxGwtt-96250502841037-Nd_ADfyJfeEfL557Nis4" 
+                className="w-full border border-neutral-300 rounded-md px-3 py-2 text-sm" 
+              />
+              <p className="text-xs text-neutral-500 mt-1">Use this if server tokens are missing</p>
             </div>
             <div>
               <label className="block text-sm font-medium mb-1">Story Name</label>

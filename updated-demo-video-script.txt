@@ -1,0 +1,203 @@
+# BlokPilot Demo Video Script (5-6 minutes) - UPDATED VERSION
+
+## Opening Hook (0-15 seconds)
+**[Screen: BlokPilot logo animation]**
+
+"Meet BlokPilot—the AI-powered content intelligence platform that's revolutionizing how teams create, optimize, and deploy winning content at scale. In the next 6 minutes, I'll show you why this is the most advanced Storyblok integration ever built."
+
+---
+
+## Hero Section Demo (15-45 seconds)
+**[Screen: Landing page with animated hero]**
+
+"BlokPilot isn't just another CMS tool—it's a complete content intelligence ecosystem. Our AI-first approach combines predictive analytics, automated localization, and intelligent optimization to turn content creation from guesswork into a data-driven science."
+
+**[Click "Launch a Demo Space" button]**
+
+"Let's dive into the features that make BlokPilot the ultimate content platform."
+
+---
+
+## Featured Projects Section (45-75 seconds)
+**[Screen: Featured Projects showcase]**
+
+"First, let's see what's possible with Storyblok. These are real projects showcasing the power of our platform."
+
+**[Show project cards]**
+
+"E-commerce platforms with AI-powered recommendations, corporate websites with dynamic content management, and blog platforms with advanced search—all built with Storyblok and enhanced by AI."
+
+**[Click on a project card]**
+
+"Each project demonstrates different capabilities: real-time inventory, team profiles, case studies, and accessibility features. This is the foundation of what we're building on."
+
+---
+
+## Predictive Content Intelligence (75-120 seconds)
+**[Screen: Predictive Intelligence interface]**
+
+"Now for the game-changer—Predictive Content Intelligence. This technology forecasts your content performance before you publish."
+
+**[Paste content: "Revolutionize Your Content Strategy with AI-Powered Storyblok Workflows"]**
+
+"Watch as our AI analyzes this content in real-time, scoring it across multiple personas and predicting CTR, engagement, and conversion rates."
+
+**[Click Analyze and show results]**
+
+"See these scores? 82% overall performance, 90% developer resonance, 75% marketer appeal. This is the future of content marketing—we're not just predicting performance, we're revolutionizing how teams approach content strategy."
+
+---
+
+## AI Assistant (120-135 seconds)
+**[Screen: AI Assistant interface]**
+
+"Our AI Assistant generates taglines, summaries, and content ideas on demand."
+
+**[Type: "Generate a compelling tagline for a Storyblok AI content platform"]**
+
+**[Click Generate and show result]**
+
+"Instant, intelligent content generation. This is AI working for you."
+
+---
+
+## Design System Generator (135-195 seconds)
+**[Screen: Design System Generator]**
+
+"Next—our AI Design System Generator. This isn't just color picking—it's complete brand identity generation powered by artificial intelligence."
+
+**[Enter brand name: "BlokPilot" and description: "AI-powered content intelligence platform"]**
+
+**[Click Generate Design System]**
+
+"Watch as our AI creates an entire brand identity kit: colors, typography, logo concepts, and ready-to-use React components—all generated in seconds."
+
+**[Show generated brand kit with colors, typography, and components]**
+
+"These aren't templates. This is AI understanding your brand personality and creating a cohesive visual identity that actually works."
+
+**[Click Export Kit]**
+
+"Complete brand kits, downloaded instantly. This is the power of AI-driven design."
+
+---
+
+## Multilingual AI Localizer (195-240 seconds)
+**[Screen: Localization interface]**
+
+"Global content at scale—our Multilingual AI Localizer doesn't just translate, it culturally adapts."
+
+**[Paste source content and select target languages]**
+
+**[Click Generate Translations]**
+
+"Quality scores, cultural adaptations, persona targeting. This is localization that actually works for global markets."
+
+**[Show translation results with quality scores]**
+
+"98% accuracy, 95% fluency, 90% cultural fit. This is how you expand globally with confidence."
+
+---
+
+## Brand Identity Mode (240-270 seconds)
+**[Screen: Brand Identity Generator]**
+
+"Complete brand identity generation with visual logo concepts."
+
+**[Enter brand information and generate]**
+
+**[Show logo SVGs]**
+
+"AI-generated logos, ready to use. This is brand creation at the speed of thought."
+
+**[Show component library]**
+
+"And our component library generates production-ready React code. This is developer productivity reimagined."
+
+---
+
+## Content Autopilot (270-330 seconds)
+**[Screen: Content Autopilot interface]**
+
+"Now for the crown jewel—Content Autopilot. This is where BlokPilot becomes truly revolutionary."
+
+**[Set up campaign with source content]**
+
+**[Click Generate Content Variants]**
+
+"Watch as our AI generates multiple content variants, automatically localizes them for different markets, and runs real-time A/B tests—all while you focus on strategy."
+
+**[Show analytics dashboard]**
+
+"Real-time analytics, persona-based optimization, and automatic winner selection. This is content marketing at the speed of AI."
+
+**[Deploy winner]**
+
+"One click deploys the winning variant to Storyblok. From creation to conversion in minutes, not weeks."
+
+---
+
+## Storyblok Playground (330-360 seconds)
+**[Screen: Storyblok Playground]**
+
+"Our Storyblok Playground lets you create and push content directly, even when Storyblok is offline."
+
+**[Show content creation interface]**
+
+"Build drafts, test content, and push to your space—all from one interface. This is the flexibility modern teams need."
+
+---
+
+## Storyblok Toolkit (360-390 seconds)
+**[Screen: Storyblok Toolkit]**
+
+"But here's where BlokPilot becomes truly powerful—our deep Storyblok integration."
+
+**[Show story management with Space ID: 287490777580041]**
+
+"Complete content lifecycle management. List stories, bulk publish, track status—all from one interface."
+
+**[Show stories list with status indicators]**
+
+"This isn't just integration, it's content orchestration. Published stories, draft management, and bulk operations—all powered by AI."
+
+---
+
+## Closing Impact (390-420 seconds)
+**[Screen: All features overview]**
+
+"BlokPilot isn't just a tool—it's the future of content management. We've combined AI intelligence, Storyblok's power, and real-time optimization into one platform that transforms how teams create content."
+
+**[Screen: Call to action]**
+
+"Ready to revolutionize your content strategy? BlokPilot is the most advanced AI-powered content platform ever built for Storyblok. This is content intelligence at its finest."
+
+**[Screen: "Made with ❤️ by Deepak"]**
+
+"Built for the future of content. Built for teams who demand excellence. This is BlokPilot."
+
+---
+
+## Key Impact Phrases Used:
+- "Revolutionizing content creation"
+- "AI-powered content intelligence"
+- "Game-changing technology"
+- "The future of content marketing"
+- "Content orchestration"
+- "Developer productivity reimagined"
+- "The most advanced AI-powered content platform ever built"
+- "Content intelligence at its finest"
+
+## Demo Content Used:
+- **Predictive Intelligence:** "Revolutionize Your Content Strategy with AI-Powered Storyblok Workflows"
+- **AI Assistant:** "Generate a compelling tagline for a Storyblok AI content platform"
+- **Design System:** Brand name "BlokPilot" with AI-powered description
+- **Localization:** Source content with 9+ target languages
+- **Brand Identity:** Complete brand kit generation
+- **Content Autopilot:** Campaign setup with variants and analytics
+- **Storyblok Playground:** Content creation and management
+- **Storyblok Toolkit:** Space ID 287490777580041 with story management
+
+## Total Runtime: ~6 minutes
+## Focus: Showcase advanced AI capabilities and seamless Storyblok integration
+## Order: Hero → Projects → Predictive → AI Assistant → Design System → Localization → Brand Identity → Content Autopilot → Playground → Toolkit → Closing
