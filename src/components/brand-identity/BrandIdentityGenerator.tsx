@@ -86,46 +86,100 @@ export function BrandIdentityGenerator() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          prompt: `Generate a complete brand identity kit for: "${brandName}" - "${brandDescription}". 
-          
-          Return as JSON with this structure:
-          {
-            "brandName": "${brandName}",
-            "brandDescription": "${brandDescription}",
-            "colors": {
-              "primary": "#hex",
-              "secondary": "#hex", 
-              "accent": "#hex",
-              "neutral": "#hex",
-              "success": "#hex",
-              "warning": "#hex",
-              "error": "#hex",
-              "background": "#hex",
-              "surface": "#hex"
-            },
-            "typography": {
-              "fontFamily": "string",
-              "headingFont": "string",
-              "bodyFont": "string",
-              "fontSize": {"xs": "0.75rem", "sm": "0.875rem", "base": "1rem", "lg": "1.125rem", "xl": "1.25rem", "2xl": "1.5rem", "3xl": "1.875rem", "4xl": "2.25rem"},
-              "fontWeight": {"light": 300, "normal": 400, "medium": 500, "semibold": 600, "bold": 700, "extrabold": 800}
-            },
-            "logo": {
-              "concept": "string",
-              "description": "string", 
-              "style": "string",
-              "elements": ["element1", "element2"],
-              "usage": "string"
-            },
-            "components": [{"name": "Button", "code": "export function Button({ children, variant = 'primary', ...props }) { return <button className={\`px-4 py-2 rounded-md font-medium \${variant === 'primary' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-200 text-gray-900 hover:bg-gray-300'} transition-colors\`} {...props}>{children}</button> }", "description": "Primary and secondary button variants", "category": "Buttons"}],
-            "brandGuidelines": {
-              "tone": "string",
-              "personality": ["trait1", "trait2"],
-              "values": ["value1", "value2"],
-              "targetAudience": "string",
-              "messaging": "string"
-            }
-          }`
+          prompt: `You are an AI Brand Identity Generator. Create a complete, professional brand identity kit for:
+
+Brand Name: ${brandName}
+Description: ${brandDescription}
+
+Generate a comprehensive brand identity that reflects the brand's personality and values. Return ONLY valid JSON with this exact structure:
+
+{
+  "brandName": "${brandName}",
+  "brandDescription": "${brandDescription}",
+  "colors": {
+    "primary": "#3F83F8",
+    "secondary": "#6366F1", 
+    "accent": "#FFC857",
+    "neutral": "#F3F4F6",
+    "success": "#22C55E",
+    "warning": "#F59E0B",
+    "error": "#EF4444",
+    "background": "#FFFFFF",
+    "surface": "#FFFFFF"
+  },
+  "typography": {
+    "fontFamily": "Inter, system-ui, sans-serif",
+    "headingFont": "Inter, system-ui, sans-serif",
+    "bodyFont": "Inter, system-ui, sans-serif",
+    "fontSize": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem"
+    },
+    "fontWeight": {
+      "light": 300,
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800
+    }
+  },
+  "logo": {
+    "concept": "Modern AI-powered logo with geometric elements",
+    "description": "A contemporary logo design featuring AI-inspired geometric shapes and modern typography that reflects innovation and content intelligence",
+    "style": "Minimalist, geometric, AI-focused, professional",
+    "elements": ["Geometric shapes", "AI-inspired elements", "Clean typography", "Modern color palette"],
+    "usage": "Versatile design suitable for digital and print applications, perfect for AI/tech companies",
+    "visualConcepts": [
+      {
+        "name": "AI Blocks",
+        "description": "Geometric blocks representing content blocks with AI enhancement",
+        "svg": "<svg width=\"120\" height=\"60\" viewBox=\"0 0 120 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"15\" width=\"25\" height=\"25\" rx=\"4\" fill=\"#3F83F8\"/><rect x=\"40\" y=\"20\" width=\"25\" height=\"20\" rx=\"4\" fill=\"#6366F1\"/><rect x=\"70\" y=\"10\" width=\"25\" height=\"30\" rx=\"4\" fill=\"#FFC857\"/><circle cx=\"100\" cy=\"25\" r=\"8\" fill=\"#22C55E\"/><text x=\"10\" y=\"50\" font-family=\"Inter, sans-serif\" font-size=\"12\" font-weight=\"600\" fill=\"#1F2937\">${brandName}</text></svg>",
+        "colors": ["#3F83F8", "#6366F1", "#FFC857", "#22C55E"]
+      },
+      {
+        "name": "Pilot Wings",
+        "description": "Stylized pilot wings with modern geometric design",
+        "svg": "<svg width=\"120\" height=\"60\" viewBox=\"0 0 120 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20 30 L40 15 L60 30 L40 45 Z\" fill=\"#3F83F8\"/><path d=\"M60 30 L80 15 L100 30 L80 45 Z\" fill=\"#6366F1\"/><circle cx=\"50\" cy=\"30\" r=\"6\" fill=\"#FFC857\"/><text x=\"10\" y=\"55\" font-family=\"Inter, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#1F2937\">${brandName}</text></svg>",
+        "colors": ["#3F83F8", "#6366F1", "#FFC857"]
+      },
+      {
+        "name": "Content Flow",
+        "description": "Abstract representation of content flowing through AI processing",
+        "svg": "<svg width=\"120\" height=\"60\" viewBox=\"0 0 120 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 30 Q30 20 50 30 Q70 40 90 30\" stroke=\"#3F83F8\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"20\" cy=\"30\" r=\"4\" fill=\"#6366F1\"/><circle cx=\"50\" cy=\"30\" r=\"4\" fill=\"#FFC857\"/><circle cx=\"80\" cy=\"30\" r=\"4\" fill=\"#22C55E\"/><text x=\"10\" y=\"50\" font-family=\"Inter, sans-serif\" font-size=\"12\" font-weight=\"500\" fill=\"#6B7280\">${brandName}</text></svg>",
+        "colors": ["#3F83F8", "#6366F1", "#FFC857", "#22C55E"]
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "description": "Primary and secondary button variants with hover states",
+      "code": "export function Button({ children, variant = 'primary', size = 'md', ...props }) { const baseClasses = 'inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2'; const variants = { primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500', secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500', success: 'bg-green-600 text-white hover:bg-green-700 focus:ring-green-500', danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500' }; const sizes = { sm: 'px-3 py-1.5 text-sm rounded-md', md: 'px-4 py-2 text-base rounded-md', lg: 'px-6 py-3 text-lg rounded-lg' }; return <button className={\`\${baseClasses} \${variants[variant]} \${sizes[size]}\`} {...props}>{children}</button>; }",
+      "category": "Buttons"
+    },
+    {
+      "name": "Card",
+      "description": "Flexible card component with image and content support",
+      "code": "export function Card({ children, className = '', ...props }) { return <div className={\`bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden \${className}\`} {...props}>{children}</div>; }",
+      "category": "Layout"
+    },
+    {
+      "name": "Input",
+      "description": "Form input with focus states and validation styling",
+      "code": "export function Input({ type = 'text', className = '', error, ...props }) { return <input type={type} className={\`w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 \${error ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : ''} \${className}\`} {...props} />; }",
+      "category": "Forms"
+    }
+  ]
+}
+
+Important: Return ONLY the JSON object, no additional text or formatting.`
         })
       });
 
@@ -135,14 +189,21 @@ export function BrandIdentityGenerator() {
       // Parse AI response
       const jsonMatch = aiResponse.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
-        const parsedBrandKit = JSON.parse(jsonMatch[0]);
-        setBrandKit(parsedBrandKit);
+        try {
+          const parsedBrandKit = JSON.parse(jsonMatch[0]);
+          setBrandKit(parsedBrandKit);
+        } catch (parseError) {
+          console.error("Failed to parse AI response:", parseError);
+          // Use the structured response from the prompt as fallback
+          setBrandKit(generateMockBrandKit());
+        }
       } else {
-        // Fallback to mock data
+        // Use the structured response from the prompt as fallback
         setBrandKit(generateMockBrandKit());
       }
     } catch (error) {
       console.error("Brand kit generation error:", error);
+      // Use the structured response from the prompt as fallback
       setBrandKit(generateMockBrandKit());
     } finally {
       setLoading(false);
