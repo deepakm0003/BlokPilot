@@ -276,6 +276,112 @@ export function CardContent({ children, className = "" }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const downloadReactComponents = () => {
+    if (!tokens) return;
+    
+    const reactComponents = tokens.components.map(component => 
+      `// ${component.name} - ${component.description}\n${component.code}\n`
+    ).join('\n');
+    
+    const blob = new Blob([reactComponents], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'react-components.tsx';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const downloadTypeScript = () => {
+    if (!tokens) return;
+    
+    const typeScriptContent = `// Design System TypeScript Definitions
+export interface DesignTokens {
+  colors: {
+    primary: string;
+    secondary: string;
+    accent: string;
+    success: string;
+    warning: string;
+    error: string;
+    neutral: string;
+  };
+  typography: {
+    headingFont: string;
+    bodyFont: string;
+    styleNotes: string;
+  };
+  spacing: {
+    xs: string;
+    sm: string;
+    md: string;
+    lg: string;
+    xl: string;
+  };
+}
+
+export const designTokens: DesignTokens = ${JSON.stringify(tokens, null, 2)};
+
+export default designTokens;`;
+    
+    const blob = new Blob([typeScriptContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'design-tokens.ts';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const downloadStorybook = () => {
+    if (!tokens) return;
+    
+    const storybookConfig = `// .storybook/main.js
+module.exports = {
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-controls',
+    '@storybook/addon-docs',
+  ],
+  framework: '@storybook/react',
+  core: {
+    builder: '@storybook/builder-webpack5',
+  },
+};
+
+// Design System Stories
+import React from 'react';
+import { DesignTokens } from './design-tokens';
+
+export default {
+  title: 'Design System/Components',
+  component: DesignTokens,
+};
+
+export const AllComponents = () => (
+  <div>
+    <h1>Design System Components</h1>
+    <p>Generated with AI for ${tokens.brandName}</p>
+    {/* Add your component stories here */}
+  </div>
+);`;
+    
+    const blob = new Blob([storybookConfig], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'storybook-config.js';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="max-w-6xl mx-auto">
       <motion.div
@@ -492,13 +598,22 @@ export function CardContent({ children, className = "" }) {
                 <div className="pt-4 border-t border-neutral-100">
                   <h4 className="text-sm font-medium text-neutral-700 mb-2">Download All Components</h4>
                   <div className="flex gap-2">
-                    <button className="px-3 py-2 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium hover:bg-blue-200 transition-colors">
+                    <button 
+                      onClick={downloadReactComponents}
+                      className="px-3 py-2 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium hover:bg-blue-200 transition-colors"
+                    >
                       Download React Components
                     </button>
-                    <button className="px-3 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium hover:bg-green-200 transition-colors">
+                    <button 
+                      onClick={downloadTypeScript}
+                      className="px-3 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium hover:bg-green-200 transition-colors"
+                    >
                       Download TypeScript
                     </button>
-                    <button className="px-3 py-2 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium hover:bg-purple-200 transition-colors">
+                    <button 
+                      onClick={downloadStorybook}
+                      className="px-3 py-2 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium hover:bg-purple-200 transition-colors"
+                    >
                       Download Storybook
                     </button>
                   </div>
