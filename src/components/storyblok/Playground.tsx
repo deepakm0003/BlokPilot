@@ -78,10 +78,41 @@ export function StoryblokPlayground({
       if (!res.ok || data.error) {
         setMessage(`Error: ${JSON.stringify(data.error || data)}`);
       } else {
-        setStories(Array.isArray(data.stories) ? data.stories : []);
+        const storiesArray = Array.isArray(data.stories) ? data.stories : [];
+        setStories(storiesArray);
+        setMessage(`Loaded ${storiesArray.length} stories`);
       }
     } catch (e) {
       setMessage(`Network error: ${e}`);
+    } finally {
+      setLoadingStories(false);
+    }
+  };
+
+  const debugConnection = async () => {
+    if (!spaceId) return;
+    setLoadingStories(true);
+    setMessage("");
+    try {
+      const res = await fetch("/api/storyblok/debug", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          spaceId,
+          devToken: devToken || undefined,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || data.error) {
+        setMessage(`Debug Error: ${JSON.stringify(data.error || data)}`);
+      } else {
+        setMessage(`Debug Success: ${data.debug?.hasStories || 0} stories found. Total: ${data.total || 0}`);
+        if (data.stories) {
+          setStories(Array.isArray(data.stories) ? data.stories : []);
+        }
+      }
+    } catch (e) {
+      setMessage(`Debug Network error: ${e}`);
     } finally {
       setLoadingStories(false);
     }
@@ -145,6 +176,9 @@ export function StoryblokPlayground({
               <div className="mt-2 flex gap-2">
                 <button onClick={fetchStories} disabled={!spaceId || loadingStories} className="px-3 py-1.5 bg-neutral-100 text-neutral-700 rounded-md text-xs font-medium disabled:opacity-50">
                   {loadingStories ? "Loading…" : "List Stories"}
+                </button>
+                <button onClick={debugConnection} disabled={!spaceId || loadingStories} className="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-md text-xs font-medium disabled:opacity-50">
+                  Debug
                 </button>
                 <button onClick={publishStory} disabled={!selectedStoryId || saving} className="px-3 py-1.5 bg-green-600 text-white rounded-md text-xs font-medium disabled:opacity-50">Publish Selected</button>
               </div>
