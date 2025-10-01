@@ -74,38 +74,38 @@ npm run dev
 Visit `http://localhost:3000` to see the application.
 
 ## 📸 Screenshots
+<img width="1920" height="9039" alt="screencapture-localhost-3003-2025-10-01-06_09_32" src="https://github.com/user-attachments/assets/e1cf5b3f-0e08-4ccf-82d2-4eddda9c727f" />
 
-### 🏠 Hero Section
-![Hero](docs/screenshots/hero.png)
-*Clean, professional landing with animated hero section*
+### 🏠 Hero Section:- *Clean, professional landing with animated hero section*
+<img width="827" height="877" alt="image" src="https://github.com/user-attachments/assets/73a968e2-8e12-41e8-b061-0b2e8cba9222" />
 
-### 🧠 Predictive Content Intelligence
-![Predictive](docs/screenshots/predictive.png)
-*Analyze content performance before publishing with AI-powered insights*
+### 😊 StoryBlok PlayGround:- *Add the draft Pages with the interesting Content*
+<img width="1399" height="720" alt="image" src="https://github.com/user-attachments/assets/8bf2a512-4c11-4b7c-81a7-8aa870d09254" />
 
-### 🤖 AI Assistant
-![Assistant](docs/screenshots/assistant.png)
-*Generate taglines, summaries, and content ideas with Gemini AI*
+### 🧠 Predictive Content Intelligence:- *Analyze content performance before publishing with AI-powered insights*
+<img width="1440" height="857" alt="image" src="https://github.com/user-attachments/assets/2ae0e662-aa1d-4244-b3cc-4b1b64c2b75a" />
 
-### 🛠️ Storyblok Toolkit
-![Toolkit](docs/screenshots/toolkit.png)
-*Manage stories, bulk publish, and track deployment status*
+### 🤖 AI Assistant:- *Generate taglines, summaries, and content ideas with Gemini AI*
+<img width="1400" height="949" alt="image" src="https://github.com/user-attachments/assets/aea771c2-a199-4e2e-9358-fbbfe32e309e" />
 
-### 🎨 Design System Generator
-![Design System](docs/screenshots/design-system.png)
-*Create design tokens and export React components*
+### 🛠️ Storyblok Toolkit:-*Manage stories, bulk publish, and track deployment status*
+<img width="1623" height="367" alt="image" src="https://github.com/user-attachments/assets/9c5068e3-3fec-4894-aa9d-5c59b8ed3e7f" />
 
-### 🌍 Multilingual Localizer
-![Localizer](docs/screenshots/localizer.png)
-*Translate content with cultural adaptation and quality scoring*
+### 🎨 Design System Generator:-*Create design tokens and export React components*
+<img width="1444" height="985" alt="image" src="https://github.com/user-attachments/assets/40e21f76-eb3b-466c-92e5-04754e2e8c76" />
 
-### 🏷️ Brand Identity Generator
-![Brand](docs/screenshots/brand-identity.png)
-*Generate complete brand kits with SVG logo concepts*
 
-### 🚀 Content Autopilot
-![Autopilot](docs/screenshots/autopilot.png)
-*Run A/B tests with real-time analytics and deploy winners*
+### 🌍 Multilingual Localizer:-*Translate content with cultural adaptation and quality scoring*
+<img width="1032" height="892" alt="image" src="https://github.com/user-attachments/assets/20fdabac-5f26-43f0-a60d-b6ae586b5063" />
+
+
+### 🏷️ Brand Identity Generator:- *Generate complete brand kits with SVG logo concepts*
+<img width="1509" height="899" alt="image" src="https://github.com/user-attachments/assets/56d222a7-60ce-47d4-b272-3dac4bd6dbf9" />
+
+
+### 🚀 Content Autopilot:- *Run A/B tests with real-time analytics and deploy winners*
+<img width="1501" height="984" alt="image" src="https://github.com/user-attachments/assets/a94a6412-2fd3-40f7-997d-c7f4c87fe8a5" />
+
 
 ## 🔧 Development
 
