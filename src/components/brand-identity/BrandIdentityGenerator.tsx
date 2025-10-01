@@ -782,12 +782,12 @@ Important: Return ONLY the JSON object, no additional text or formatting.`
                     <div className="space-y-4">
                       <div>
                         <h5 className="font-medium text-sm text-neutral-700 mb-2">Tone</h5>
-                        <p className="text-sm">{brandKit.brandGuidelines.tone}</p>
+                        <p className="text-sm">{brandKit.brandGuidelines?.tone || "Professional and innovative"}</p>
                       </div>
                         <div>
                           <h5 className="font-medium text-sm text-neutral-700 mb-2">Personality</h5>
                           <div className="flex flex-wrap gap-2">
-                            {(brandKit.brandGuidelines.personality || []).map((trait, index) => (
+                            {(brandKit.brandGuidelines?.personality || []).map((trait, index) => (
                               <span key={index} className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">
                                 {trait}
                               </span>
@@ -797,7 +797,7 @@ Important: Return ONLY the JSON object, no additional text or formatting.`
                         <div>
                           <h5 className="font-medium text-sm text-neutral-700 mb-2">Values</h5>
                           <div className="flex flex-wrap gap-2">
-                            {(brandKit.brandGuidelines.values || []).map((value, index) => (
+                            {(brandKit.brandGuidelines?.values || []).map((value, index) => (
                               <span key={index} className="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">
                                 {value}
                               </span>
@@ -806,11 +806,11 @@ Important: Return ONLY the JSON object, no additional text or formatting.`
                         </div>
                       <div>
                         <h5 className="font-medium text-sm text-neutral-700 mb-2">Target Audience</h5>
-                        <p className="text-sm">{brandKit.brandGuidelines.targetAudience}</p>
+                        <p className="text-sm">{brandKit.brandGuidelines?.targetAudience || "Modern professionals and tech enthusiasts"}</p>
                       </div>
                       <div>
                         <h5 className="font-medium text-sm text-neutral-700 mb-2">Messaging</h5>
-                        <p className="text-sm">{brandKit.brandGuidelines.messaging}</p>
+                        <p className="text-sm">{brandKit.brandGuidelines?.messaging || "Innovation meets reliability"}</p>
                       </div>
                     </div>
                   </div>
