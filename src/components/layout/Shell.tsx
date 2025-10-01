@@ -21,7 +21,7 @@ export function Shell({ children }: { children: ReactNode }) {
       </header>
       {children}
       <footer className="border-t border-neutral-100 mt-24">
-        <div className="max-w-7xl mx-auto px-6 py-10 text-sm text-neutral-500">© 2025 SBX-CC Hackathon</div>
+        <div className="max-w-7xl mx-auto px-6 py-10 text-sm text-neutral-500 text-center">© 2025 BlokPilot • Made with ❤️ by Deepak</div>
       </footer>
     </div>
   );
