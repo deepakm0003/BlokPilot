@@ -150,18 +150,18 @@ export function BrandIdentityGenerator() {
   };
 
   const generateMockBrandKit = (): BrandKit => ({
-    brandName: brandName || "TechFlow",
-    brandDescription: brandDescription || "Modern technology solutions",
+    brandName: brandName || "BlokPilot",
+    brandDescription: brandDescription || "AI-powered content intelligence platform for Storyblok that helps teams create, optimize, and deploy winning content at scale. Modern, professional, and innovative.",
     colors: {
-      primary: "#3B82F6",
-      secondary: "#8B5CF6",
-      accent: "#F59E0B",
-      neutral: "#6B7280",
-      success: "#10B981",
+      primary: "#3F83F8",
+      secondary: "#6366F1", 
+      accent: "#FFC857",
+      neutral: "#F3F4F6",
+      success: "#22C55E",
       warning: "#F59E0B",
       error: "#EF4444",
       background: "#FFFFFF",
-      surface: "#F8FAFC"
+      surface: "#FFFFFF"
     },
     typography: {
       fontFamily: "Inter, system-ui, sans-serif",
@@ -187,43 +187,46 @@ export function BrandIdentityGenerator() {
       }
     },
     logo: {
-      concept: "Modern geometric logo with clean lines",
-      description: "A contemporary logo design featuring geometric shapes and modern typography that reflects innovation and professionalism",
-      style: "Minimalist, geometric, professional",
-      elements: ["Geometric shapes", "Clean typography", "Modern color palette"],
-      usage: "Versatile design suitable for digital and print applications",
+      concept: "Modern AI-powered logo with geometric elements",
+      description: "A contemporary logo design featuring AI-inspired geometric shapes and modern typography that reflects innovation and content intelligence",
+      style: "Minimalist, geometric, AI-focused, professional",
+      elements: ["Geometric shapes", "AI-inspired elements", "Clean typography", "Modern color palette"],
+      usage: "Versatile design suitable for digital and print applications, perfect for AI/tech companies",
       visualConcepts: [
         {
-          name: "Geometric Flow",
-          description: "Clean geometric shapes with flowing lines",
+          name: "AI Blocks",
+          description: "Geometric blocks representing content blocks with AI enhancement",
           svg: `<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="20" width="30" height="20" rx="4" fill="#3B82F6"/>
-            <circle cx="60" cy="30" r="15" fill="#8B5CF6"/>
-            <path d="M80 15 L100 15 L95 30 L85 30 Z" fill="#F59E0B"/>
-            <text x="10" y="50" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1F2937">TechFlow</text>
+            <rect x="10" y="15" width="25" height="25" rx="4" fill="#3F83F8"/>
+            <rect x="40" y="20" width="25" height="20" rx="4" fill="#6366F1"/>
+            <rect x="70" y="10" width="25" height="30" rx="4" fill="#FFC857"/>
+            <circle cx="100" cy="25" r="8" fill="#22C55E"/>
+            <text x="10" y="50" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1F2937">BlokPilot</text>
           </svg>`,
-          colors: ["#3B82F6", "#8B5CF6", "#F59E0B"]
+          colors: ["#3F83F8", "#6366F1", "#FFC857", "#22C55E"]
         },
         {
-          name: "Minimalist Mark",
-          description: "Simple, elegant mark with typography",
+          name: "Pilot Wings",
+          description: "Stylized pilot wings with modern geometric design",
           svg: `<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="25" cy="25" r="20" fill="#3B82F6"/>
-            <rect x="50" y="10" width="40" height="30" rx="6" fill="#8B5CF6"/>
-            <text x="10" y="50" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#1F2937">TechFlow</text>
+            <path d="M20 30 L40 15 L60 30 L40 45 Z" fill="#3F83F8"/>
+            <path d="M60 30 L80 15 L100 30 L80 45 Z" fill="#6366F1"/>
+            <circle cx="50" cy="30" r="6" fill="#FFC857"/>
+            <text x="10" y="55" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#1F2937">BlokPilot</text>
           </svg>`,
-          colors: ["#3B82F6", "#8B5CF6"]
+          colors: ["#3F83F8", "#6366F1", "#FFC857"]
         },
         {
-          name: "Abstract Symbol",
-          description: "Creative abstract representation",
+          name: "Content Flow",
+          description: "Abstract representation of content flowing through AI processing",
           svg: `<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 30 Q30 10 50 30 Q70 50 90 30" stroke="#3B82F6" stroke-width="4" fill="none"/>
-            <circle cx="20" cy="30" r="6" fill="#8B5CF6"/>
-            <circle cx="80" cy="30" r="6" fill="#F59E0B"/>
-            <text x="10" y="50" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#6B7280">TechFlow</text>
+            <path d="M10 30 Q30 20 50 30 Q70 40 90 30" stroke="#3F83F8" stroke-width="3" fill="none"/>
+            <circle cx="20" cy="30" r="4" fill="#6366F1"/>
+            <circle cx="50" cy="30" r="4" fill="#FFC857"/>
+            <circle cx="80" cy="30" r="4" fill="#22C55E"/>
+            <text x="10" y="50" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#6B7280">BlokPilot</text>
           </svg>`,
-          colors: ["#3B82F6", "#8B5CF6", "#F59E0B"]
+          colors: ["#3F83F8", "#6366F1", "#FFC857", "#22C55E"]
         }
       ]
     },
@@ -326,6 +329,102 @@ export function BrandIdentityGenerator() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const exportBrandKit = () => {
+    if (!brandKit) return;
+    
+    const htmlContent = `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>${brandKit.brandName} - Brand Identity Kit</title>
+    <style>
+        body { font-family: Inter, sans-serif; margin: 0; padding: 20px; background: #f8fafc; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: ${brandKit.colors.primary}; font-size: 32px; margin-bottom: 8px; }
+        h2 { color: ${brandKit.colors.secondary}; font-size: 24px; margin: 32px 0 16px 0; }
+        h3 { color: #374151; font-size: 18px; margin: 24px 0 12px 0; }
+        p { color: #6b7280; line-height: 1.6; margin-bottom: 16px; }
+        .color-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 20px 0; }
+        .color-item { display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px; }
+        .color-swatch { width: 40px; height: 40px; border-radius: 6px; border: 1px solid #d1d5db; }
+        .color-info { flex: 1; }
+        .color-name { font-weight: 600; color: #374151; margin-bottom: 4px; }
+        .color-code { font-family: monospace; color: #6b7280; font-size: 14px; }
+        .logo-section { margin: 32px 0; }
+        .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin: 20px 0; }
+        .logo-item { text-align: center; padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px; }
+        .logo-svg { margin: 16px 0; }
+        .component-section { margin: 32px 0; }
+        .component-item { margin: 20px 0; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; background: #f9fafb; }
+        .component-name { font-weight: 600; color: #374151; margin-bottom: 8px; }
+        .component-code { font-family: monospace; font-size: 12px; color: #6b7280; background: white; padding: 12px; border-radius: 4px; overflow-x: auto; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center; color: #6b7280; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>${brandKit.brandName}</h1>
+        <p>${brandKit.brandDescription}</p>
+        
+        <h2>Brand Colors</h2>
+        <div class="color-grid">
+            ${Object.entries(brandKit.colors).map(([name, color]) => `
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: ${color}"></div>
+                    <div class="color-info">
+                        <div class="color-name">${name.charAt(0).toUpperCase() + name.slice(1)}</div>
+                        <div class="color-code">${color}</div>
+                    </div>
+                </div>
+            `).join('')}
+        </div>
+        
+        <h2>Typography</h2>
+        <p><strong>Font Family:</strong> ${brandKit.typography.fontFamily}</p>
+        <p><strong>Heading Font:</strong> ${brandKit.typography.headingFont}</p>
+        <p><strong>Body Font:</strong> ${brandKit.typography.bodyFont}</p>
+        
+        <h2>Logo Concepts</h2>
+        <div class="logo-grid">
+            ${brandKit.logo.visualConcepts.map(concept => `
+                <div class="logo-item">
+                    <h3>${concept.name}</h3>
+                    <p>${concept.description}</p>
+                    <div class="logo-svg">${concept.svg}</div>
+                    <p><strong>Colors:</strong> ${concept.colors.join(', ')}</p>
+                </div>
+            `).join('')}
+        </div>
+        
+        <h2>Component Library</h2>
+        <div class="component-section">
+            ${brandKit.components.map(component => `
+                <div class="component-item">
+                    <div class="component-name">${component.name}</div>
+                    <p>${component.description}</p>
+                    <div class="component-code">${component.code}</div>
+                </div>
+            `).join('')}
+        </div>
+        
+        <div class="footer">
+            <p>Generated by BlokPilot AI Brand Identity Generator</p>
+        </div>
+    </div>
+</body>
+</html>`;
+
+    const blob = new Blob([htmlContent], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${brandKit.brandName}-brand-kit.html`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   const tabs = [
     { id: "colors", label: "Colors", icon: "🎨" },
     { id: "typography", label: "Typography", icon: "📝" },
@@ -410,7 +509,10 @@ export function BrandIdentityGenerator() {
                   >
                     {copied ? "Copied!" : "Copy CSS"}
                   </button>
-                  <button className="px-4 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium hover:bg-green-200 transition-colors">
+                  <button 
+                    onClick={exportBrandKit}
+                    className="px-4 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium hover:bg-green-200 transition-colors"
+                  >
                     Export Kit
                   </button>
                 </div>
